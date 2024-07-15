@@ -1,4 +1,4 @@
-# GameZoon : https://github.com/MoAdel23/GameZoon
+# GameZoon 
 
 GameZoon is an online platform dedicated to gaming enthusiasts. It provides a space for users to discover, discuss, and play games. This project is built using ASP.NET Core MVC, with authentication and authorization managed by the Identity package, and data stored in a SQL Server database.
 
@@ -17,5 +17,5 @@ GameZoon is an online platform dedicated to gaming enthusiasts. It provides a sp
 - **SQL Server**: For data storage and management.
 - **Entity Framework Core**: For database access.
 
-
-   
+## Links
+- **Repo:** [https://github.com/MoAdel23/GameZoon ]
