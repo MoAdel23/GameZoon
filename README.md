@@ -28,7 +28,7 @@ GameZoon is an online platform dedicated to gaming enthusiasts. It provides a sp
 
 1. **Clone the repository**:
     ```sh
-    git clone https://github.com/yourusername/GameZoon.git
+    git clone https://github.com/MoAdel23/GameZoon.git
     cd GameZoon
     ```
 
