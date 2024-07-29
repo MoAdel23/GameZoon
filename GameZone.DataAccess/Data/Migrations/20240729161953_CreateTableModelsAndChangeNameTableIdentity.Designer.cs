@@ -4,6 +4,7 @@ using GameZone.DataAccess.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GameZone.DataAccess.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240729161953_CreateTableModelsAndChangeNameTableIdentity")]
+    partial class CreateTableModelsAndChangeNameTableIdentity
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -111,38 +114,6 @@ namespace GameZone.DataAccess.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Categories");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Name = "Sports"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Name = "Action"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Name = "Adventure"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Name = "Racing"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            Name = "Fighting"
-                        },
-                        new
-                        {
-                            Id = 6,
-                            Name = "Film"
-                        });
                 });
 
             modelBuilder.Entity("GameZone.Entities.Models.Device", b =>
@@ -166,32 +137,6 @@ namespace GameZone.DataAccess.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Devices");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Icon = "bi bi-playstation",
-                            Name = "PlayStation"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Icon = "bi bi-xbox",
-                            Name = "Xbox"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Icon = "bi bi-nintendo-switch",
-                            Name = "Nintendo Switch"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Icon = "bi bi-pc-display",
-                            Name = "PC"
-                        });
                 });
 
             modelBuilder.Entity("GameZone.Entities.Models.Game", b =>

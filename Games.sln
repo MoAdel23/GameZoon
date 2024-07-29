@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameZone", "GameZone\GameZone.csproj", "{B4D6305E-394A-4BA8-859D-6908E53F8606}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameZone.Entities", "GameZone.Entities\GameZone.Entities.csproj", "{237156AC-AA92-43C8-B149-20FEF29797A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameZone.DataAccess", "GameZone.DataAccess\GameZone.DataAccess.csproj", "{24506F9C-B38F-4B05-8BD1-C90109CDEDBF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B4D6305E-394A-4BA8-859D-6908E53F8606}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4D6305E-394A-4BA8-859D-6908E53F8606}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4D6305E-394A-4BA8-859D-6908E53F8606}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4D6305E-394A-4BA8-859D-6908E53F8606}.Release|Any CPU.Build.0 = Release|Any CPU
+		{237156AC-AA92-43C8-B149-20FEF29797A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{237156AC-AA92-43C8-B149-20FEF29797A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{237156AC-AA92-43C8-B149-20FEF29797A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{237156AC-AA92-43C8-B149-20FEF29797A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24506F9C-B38F-4B05-8BD1-C90109CDEDBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24506F9C-B38F-4B05-8BD1-C90109CDEDBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24506F9C-B38F-4B05-8BD1-C90109CDEDBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24506F9C-B38F-4B05-8BD1-C90109CDEDBF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

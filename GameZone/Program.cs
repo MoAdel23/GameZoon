@@ -1,5 +1,5 @@
-using GameZone.DataAccess.Data;
-using GameZone.Entities.Models;
+
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 namespace GameZone;
@@ -12,30 +12,32 @@ public class Program
 
         // Add services to the container.
         var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
+        
         builder.Services.AddDbContext<ApplicationDbContext>(options =>
             options.UseSqlServer(connectionString));
-        builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
         // Add Razor Runtime Compilation
         builder.Services.AddRazorPages().AddRazorRuntimeCompilation();
 
-        builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
-            .AddEntityFrameworkStores<ApplicationDbContext>();
+        builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
+            .AddEntityFrameworkStores<ApplicationDbContext>()
+             .AddDefaultUI()
+         .AddDefaultTokenProviders(); 
+
+       
+       
         builder.Services.AddControllersWithViews();
 
         var app = builder.Build();
 
         // Configure the HTTP request pipeline.
-        if (app.Environment.IsDevelopment())
-        {
-            app.UseMigrationsEndPoint();
-        }
-        else
+        if (!app.Environment.IsDevelopment())
         {
             app.UseExceptionHandler("/Home/Error");
             // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
             app.UseHsts();
         }
+
 
         app.UseHttpsRedirection();
         app.UseStaticFiles();
@@ -47,6 +49,7 @@ public class Program
         app.MapControllerRoute(
             name: "default",
             pattern: "{controller=Home}/{action=Index}/{id?}");
+        
         app.MapRazorPages();
 
         app.Run();
