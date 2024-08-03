@@ -7,25 +7,34 @@
     <UserSecretsId>aspnet-GameZone-327c1e8f-b008-4487-b2d8-2fe139104248</UserSecretsId>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Content Remove="wwwroot\js\filesize-validator.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="wwwroot\js\filesize-validator.js" />
+  </ItemGroup>
+
 
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="8.0.7" />
 		<PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="8.0.7" />
-		
-		<!--<PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.7" />-->
-		<!--<PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.7" />
-		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.7" />
-		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.7">
-			<PrivateAssets>all</PrivateAssets>
-			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-		</PackageReference>
-		<PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.3" />-->
 	</ItemGroup>
  
 
   <ItemGroup>
     <ProjectReference Include="..\GameZone.DataAccess\GameZone.DataAccess.csproj" />
+  </ItemGroup>
+ 
+
+  <ItemGroup>
+    <Folder Include="wwwroot\assets\images\games\" />
+  </ItemGroup>
+ 
+
+  <ItemGroup>
+    <None Include="wwwroot\js\filesize-validator.js" />
   </ItemGroup>
 
 </Project>

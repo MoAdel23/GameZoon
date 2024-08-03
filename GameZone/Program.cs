@@ -1,4 +1,6 @@
 
+using GameZone.DataAccess.Repositories;
+using GameZone.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -22,9 +24,12 @@ public class Program
         builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
             .AddEntityFrameworkStores<ApplicationDbContext>()
              .AddDefaultUI()
-         .AddDefaultTokenProviders(); 
+         .AddDefaultTokenProviders();
 
-       
+        
+        builder.Services.AddScoped<IGameService, GameService>();
+        builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+        builder.Services.AddScoped<IFileService, FileService>();
        
         builder.Services.AddControllersWithViews();
 

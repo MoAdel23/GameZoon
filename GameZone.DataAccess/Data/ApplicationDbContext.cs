@@ -9,14 +9,14 @@ namespace GameZone.DataAccess.Data;
 public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
 {
 
-    DbSet<Game> Games { get; set; }
-
-    DbSet<Device> Devices { get; set; }
-
-    DbSet<Category>  Categories { get; set; }
-
-    DbSet<GameDevivce>  GameDevivces { get; set; }
-
+    public DbSet<Game> Games { get; set; }
+   
+    public DbSet<Device> Devices { get; set; }
+ 
+    public DbSet<Category>  Categories { get; set; }
+  
+    public DbSet<GameDevivce>  GameDevivces { get; set; }
+   
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
         : base(options)
     {
